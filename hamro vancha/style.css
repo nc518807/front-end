@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100;1,400&display=swap');
+:root{
+    --blue:#2980b9;
+}
+*{
+    font-family:'open sans' ,sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all .2s cubic-bezier(.37,1.14,.26,1.24);
+}
+::selection{
+    background-color: brown;
+    color: cornsilk;
+}
+html{
+    font-size: 62.5%;
+    overflow-x:hidden;
+}
+
+header .header-1,header .header-2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1.5rem;
+    width: 100%;
+    z-index: 100;
+
+}
+header .header-1 .logo{
+    font-size: 2em;
+    color: darkblue;
+}
+header .header-1 .logo {
+    color: var(--blue);
+
+}
+
+header .header-1 .form-container form{
+    display: flex;
+}
+header .header-1 .form-container form #search{
+    height: 4rem;
+    width: 50rem;
+    outline: none;
+    border: .2rem solid #2980b9;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+}
+header .header-1  .form-container form label{
+    height: 4rem;
+    width: 5rem;
+    text-align: center;
+    line-height: 4rem;
+    font-size: 2rem;
+    cursor: pointer;
+    background: var(--blue);
+    color: antiquewhite;
+}
+header .header-1  .form-container form label:hover{
+    color: yellow;
+}
+header .header-2{
+    background: var(--blue);
+}
+
+header .header-2 .navbar ul{
+list-style: none;
+display:flex;
+align-items: center;
+justify-content: space-between;
+
+}
+header .header-2 .navbar ul li{
+    margin: 0 1rem;
+    
+}
+header .header-2 .navbar ul li a{
+    font-size: 2rem;
+    color: aliceblue;
+}
+
+header .header-2 .navbar ul li a:hover{
+    color: yellow;
+}
+header .header-2 .icons a{
+    color:white;
+    font-size: 2rem;
+    padding: 0 1rem;
+
+}
+header .header-2 .icons a:hover{
+    color: yellow;
+}
+header .header-2 #menu{
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+ 
+/* media queries */
+@media(max-width:768px){
+
+    html{
+        font-size: 55%;
+    }
+
+    header .header-1 .form-container form #search{
+        width: 100%;
+    }
+    header .header-2 #menu{
+        display: block;
+    }
+
+    header .header-2 .navbar{
+        position:fixed;
+        top:-200rem; left:50%;
+        transform:translate(-50%,-50%);
+        box-shadow: 0 0 0 100vh rgba(0, 0, 0, .3);
+        z-index: 10000;
+        opacity: 0;
+    }
+    header .header-2 .navbar ul{
+        flex-flow: column;
+        background:linear-gradient(var(--blue),blueviolet);
+        border: .2rem solid #fff;
+        box-shadow: 0 .3rem .5rem #000;
+        padding: 4rem 0;
+        width:27rem;
+        
+    }
+
+    header .header-2 .navbar ul li{
+        width: 100%;
+        margin: 1rem 0;
+        text-align: center;
+
+    }
+    header .header-2 .navbar ul li a{
+        
+        font-size:2.5rem;
+        display: block;
+
+    }
+    
+}
+
+@media(max-width:400px){
+    header .header-1 {
+        flex-flow: column;
+        padding: 1rem;
+    }
+    header .header-1 .logo{
+        padding-bottom: 1.5rem;
+    }
+
+}
